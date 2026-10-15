@@ -1,9 +1,10 @@
+from app.core.config import settings
 from fastapi import FastAPI
 
 app = FastAPI(
-    title="varm-ai-store-backend",
-    description="Motor de Tienda Virtual con Agente de IA y Cotizador Inteligente - Arquitectura Premium",
-    version="1.0.0",
+    title=settings.PROJECT_NAME,
+    version=settings.VERSION,
+    description="Virtual Store Engine with AI Agent and Budget Matcher",
 )
 
 
@@ -12,5 +13,5 @@ async def root():
     return {
         "status": "varm-motor-online",
         "developer": "Milton - Senior Engineer",
-        "location": "Puerto Asís -> Okinawa 🇯🇵",
+        "destination": "Okinawa 🇯🇵",
     }
