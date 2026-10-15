@@ -1,13 +1,15 @@
 [project]
 name = "backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "Motor de Tienda Virtual con Agente de IA y Cotizador Inteligente"
 readme = "README.md"
 authors = [
     { name = "Milton Valencia R", email = "miltonalonsovalenciarincon@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.143.2",
+]
 
 [project.scripts]
 backend = "backend:main"
@@ -15,3 +17,6 @@ backend = "backend:main"
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv]
+package = false
